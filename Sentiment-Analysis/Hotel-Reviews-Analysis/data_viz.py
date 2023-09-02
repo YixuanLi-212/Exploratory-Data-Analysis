@@ -16,16 +16,16 @@ def bar_chart(df, col, top_n = 10):
     # Select the top values
     top = char_bar.head(top_n)
 
-    plt.figure(figsize=(10, 6))
-    plt.bar(top[col], top["Rating(Out of 10)"], width = 5, color='lightblue')
+    plt.figure(figsize=(12, 8))
+    plt.barh(top[col], top["Rating(Out of 10)"], color='lightblue')
 
     plt.xlabel(col)
     plt.ylabel("Rating(Out of 10)")
     plt.title(f"Top {top_n} {col} by Rating (Out of 10)")
 
-    plt.grid(axis='y', linestyle='--', alpha=0.7)
-    plt.xticks(rotation=45, fontsize=12) 
-    plt.yticks(fontsize=12) 
+    plt.grid(axis='x', linestyle='--', alpha=0.7)
+    plt.xticks() 
+    plt.yticks()
     plt.tight_layout()
 
     plt.show()

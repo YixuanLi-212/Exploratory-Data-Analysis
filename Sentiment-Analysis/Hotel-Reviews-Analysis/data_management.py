@@ -14,19 +14,17 @@ def remove_duplicates(df):
     return df
 
 def data_report(df, verbose=False):
-    # Drop the index first
-    df.drop(["Index"], axis=1, inplace=True)
-
     report = {}
+    
+    # Remove duplicates and update the DataFrame
+    df = remove_duplicates(df)
+
     # Get the raw dataset info
     report['Raw Dataframe Info'] = {
         'Row_num of the dataset': df.shape[0],
         'Col_num of the dataset': df.shape[1],
         'Size of the dataset': df.size
     }
-
-    # Remove duplicates and update the DataFrame
-    df = remove_duplicates(df)
 
     # Dataframe Info
     info = df.info()
