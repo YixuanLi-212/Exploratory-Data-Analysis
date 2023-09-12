@@ -13,7 +13,6 @@ def bar_chart(df, col, top_n = 10):
     char_bar = df.groupby([col])[['Name', 'Rating(Out of 10)']].mean().reset_index()
     char_bar = char_bar.sort_values(by=("Rating(Out of 10)"), ascending = False)
 
-    # Select the top values
     top = char_bar.head(top_n)
 
     plt.figure(figsize=(12, 8))
