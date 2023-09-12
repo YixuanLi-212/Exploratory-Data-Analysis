@@ -2,6 +2,7 @@ import pandas as pd
 import colorama
 from colorama import Fore, Style
 
+## Remove duplicated rows first
 def remove_duplicates(df):
     duplicated_rows = df[df.duplicated()]
     if not duplicated_rows.empty:
