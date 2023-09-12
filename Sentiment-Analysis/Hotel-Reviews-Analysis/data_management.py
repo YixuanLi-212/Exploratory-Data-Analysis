@@ -15,8 +15,7 @@ def remove_duplicates(df):
 
 def data_report(df, verbose=False):
     report = {}
-    
-    # Remove duplicates and update the DataFrame
+  
     df = remove_duplicates(df)
 
     # Get the raw dataset info
