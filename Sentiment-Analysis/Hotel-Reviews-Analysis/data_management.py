@@ -25,7 +25,6 @@ def data_report(df, verbose=False):
         'Size of the dataset': df.size
     }
 
-    # Dataframe Info
     info = df.info()
     report['Dataframe Info'] = info
 
