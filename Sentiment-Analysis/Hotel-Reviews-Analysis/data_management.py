@@ -2,6 +2,7 @@ import pandas as pd
 import colorama
 from colorama import Fore, Style
 
+## Add the branch from DE-2 (instead of main branch)
 def remove_duplicates(df):
     duplicated_rows = df[df.duplicated()]
     if not duplicated_rows.empty:
